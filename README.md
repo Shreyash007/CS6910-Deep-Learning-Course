@@ -57,10 +57,6 @@ For evaluating our model download [train.py](https://github.com/Shreyash007/CS69
 python train.py 
 ```
 The arguments supported by train.py file are:
-Supported arguments can also be found by:
-```
-python train.py -h
-```
 
 | Name | Default Value | Description |
 | :---: | :-------------: | :----------- |
@@ -78,7 +74,11 @@ python train.py -h
 | `--activation` | sigmoid | choices:  ["sigmoid", "tanh", "relu"] |
 | `--dropout_rate` | 0.1 | choice in range (0,1) |
 
-#### The default run has 30 epochs and  hidden layer size [256,256,256]. Hence, it may take some time to create the logs. Check the command line for the runtime.
+Supported arguments can also be found by:
+```
+python train.py -h
+```
+#### The default run has 30 epochs and  hidden layer size [256,256,256]. Hence, it may take some time to create the logs. Check the command line for runtime.
 
 ## Report
 
