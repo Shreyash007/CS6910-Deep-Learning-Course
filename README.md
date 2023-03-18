@@ -102,25 +102,22 @@ Solution Approach:
 
 - Implement a function to calculate confusion matrix.
 - Plot and integrate wandb to keep track using wandb.
-The best model can be found [here](https://github.com/RituparnaAdha/cs6910/tree/main/Assignment1/model).
-The code for question 7 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/46a7deb1820b546099d0d6fb43afa8eacb6cdb34).
-The wandb visualisation for question 7 can be found [here](https://wandb.ai/shreekanti/confusion_matrix1?workspace=user-shreekanti).
+The best model can be found [here]().
+The code for question 7 can be found [here]().
+The wandb visualisation for question 7 can be found [here]().
 ## Question 8
 Solution Approach:
 - Implement a function `squared error loss`.
 - Get outputs of both `squared error loss` and `cross entropy loss`.
 - Integrate the outputs of `squared error loss` and `cross entropy loss` to see automatically generated plot on wandb.
 
-The code for question 8 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/dada70a3e3ff58c3eb49839d602be272318946e5).
-The wandb visualisation for question 8 can be found [here](https://wandb.ai/shreekanti/assignement1-lossfunc1?workspace=user-shreekanti).
+The code for question 8 can be found [here]().
+The wandb visualisation for question 8 can be found [here]().
 ## Evaluation
 
-The code for evaluating our test data can be found [here](https://github.com/RituparnaAdha/cs6910/blob/main/Assignment1/evaluation.py).
+The code for evaluating our test data can be found [here]().
 
 ## Report
 
-The report for this assignment can be found [here](https://wandb.ai/shreekanti/confusion_matrix1/reports/Assignment1--Vmlldzo1MjY1MjU).
+The report for this assignment can be found [here]().
 ## Authors
-
- - [Shree Kanti](https://github.com/shreekanti/) 
- - [Rituparna Adha](https://github.com/RituparnaAdha/)
