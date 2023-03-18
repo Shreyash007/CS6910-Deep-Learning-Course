@@ -1,32 +1,33 @@
 
-# CS6910- Deep Learning course
+# CS6910: Assignment-1
 ## Problem Statement
-The goal of this sssignment  is to implement our own feedforward, backpropagation code, use gradient descent (and its variants) with backpropagation, use our own optimizers and use it for a classification task and keep track of our
+The goal of this assignment  is to implement our own feedforward, backpropagation code, use gradient descent (and its variants) with backpropagation, use our own optimizers and use it for a classification task and keep track of our
 experiments using [wandb.ai](https://wandb.ai/home).
 
 
 ## Prerequisites
 
 ```
-Python(find out version)
-Numpy(find oout version)
+python 3.9
+numpy 1.21.5
 keras #ONLY FOR IMPORTING DATASET
 ```
-## Dataset
-- I have used Fashion-MNIST dataset for complete experiments.
-- I have used MNIST dataset for Q10.
-
-## Installation
-
  - Clone/download  this repository
  - I have conducted all my experiments in Google Collab, for running in google colab, install wandb using following command -
-  ``` !pip install wandb ```
+  ``` 
+  !pip install wandb 
+  ```
  - For running locally, install wandb and other required libraries using following command  
   ``` 
   pip install wandb
   pip install numpy
   pip install keras
   ```
+
+## Dataset
+- I have used Fashion-MNIST dataset for complete experiments.
+- I have used MNIST dataset for Q10.
+
 ## Hyperparameters used in experiments
 |Sr. no| Hyperparameter| Variation/values used|
 |------|---------------|-----------------|
@@ -48,76 +49,40 @@ keras #ONLY FOR IMPORTING DATASET
 
 The code for question 1,2,3 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/349f0e600abf3c370c902df77675dbb2577d06aa).
 
-## Question 4,5,6
-Solution Approach:
-- Get the output of feedforward backpropagation from previous question.
-- Initialize one hot function to encode the labels of images.
-- Implement backpropagation function.
-- Initialize predictions, accurracy, loss, functions.
-- Initialize gradient discent functions.
-- Implement training function to use above functions.
 
-The code for question 3 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/81c7790be2c779fb9376a0158f4adb45645c70ec).
+## Evaluation file(train.py)
 
-## Question 4
-
-Solution Approach:
-
- - Split the train data in the ratio of 9:1. 90% of the data is for training purpose and 10% of the data is for validation.
- - Set the sweep function of wandb by setting up different parameters in sweep_config.
- - we can see the ouput within our wandb project using the code below-
+For evaluating our model download [train.py](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/train.py) file. (make sure you have all the prerequisite libraries installed). To check the wandb log for evaluation run the following command in the command line(this will take the default arguments).
 ```
-wandb.agent(sweep_id,train)
+python train.py 
+```
+The arguments supported by train.py file are:
+Supported arguments can also be found by:
+```
+python train.py -h
 ```
 
-The code for question 4 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/3540f3753067f1dda62448578739f25d638d33c7).
-The wandb visualisation for question 4 can be found [here](https://wandb.ai/shreekanti/confusion_matrix1/reports/Question-4--Vmlldzo1MjY2ODc).
+| Name | Default Value | Description |
+| :---: | :-------------: | :----------- |
+| `--wandb_project` | "CS-6910 A1" | Project name used to track experiments in Weights & Biases dashboard |
+| `--wandb_entity` | "shreyashgadgil007"  | Wandb Entity used to track experiments in the Weights & Biases dashboard. |
+| `--dataset` | "fashion_mnist" | choices:  ["mnist", "fashion_mnist"] |
+| `--epochs` | 30 |  Number of epochs to train neural network.|
+| `--batch_size` | 32 | Batch size used to train neural network. | 
+| `--loss_function` | "cross_entropy" | choices:  ["square_error", "cross_entropy"] |
+| `--optimiser` | "nadam" | choices:  ["gd", "mgd", "ngd", "rmsprop", "adam", "nadam"] | 
+| `--learning_rate` | 0.0001 | Learning rate used to optimize model parameters | 
+| `--weight_decay` | 0.0005 | Weight decay used by optimizers. |
+| `--initialisation` | "xavier" | choices:  ["random", "xavier"] | 
+| `--hidden_layer` | [256,256,256] | Number of hidden layers used in feedforward neural network. | 
+| `--activation` | sigmoid | choices:  ["sigmoid", "tanh", "relu"] |
+| `--dropout_rate` | 0.1 | choice in range (0,1) |
 
-
-## Question 5
-
-The wandb visualisation for question 5 can be found [here](https://wandb.ai/rituparna_adha/assignement1/reports/Shared-panel-21-03-13-11-03-82--Vmlldzo1MjY2NzA).
-
-
-
-## Question 6
-
-The wandb visualisation for question 6 can be found [here](https://wandb.ai/rituparna_adha/assignement1/reports/Shared-panel-21-03-13-11-03-73--Vmlldzo1MjY2NzU).
-
-## Question 7
-Solution Approach:
-- Get the best model.
-- Report the best accuracy.
-- The best model configuration is-
-        learning_rate: 0.001,
-	epochs: 10,
-	no_hidden_layer: 3,
-	size_hidden_layers:128,
-	optimizer: adam,
-	batch_size:128,
-	activation: tanh,
-	weight_initializations: random,
-	weight_decay: 0,
-	loss_function:ce
-
-- Implement a function to calculate confusion matrix.
-- Plot and integrate wandb to keep track using wandb.
-The best model can be found [here]().
-The code for question 7 can be found [here]().
-The wandb visualisation for question 7 can be found [here]().
-## Question 8
-Solution Approach:
-- Implement a function `squared error loss`.
-- Get outputs of both `squared error loss` and `cross entropy loss`.
-- Integrate the outputs of `squared error loss` and `cross entropy loss` to see automatically generated plot on wandb.
-
-The code for question 8 can be found [here]().
-The wandb visualisation for question 8 can be found [here]().
-## Evaluation
-
-The code for evaluating our test data can be found [here]().
+#### The default run has 30 epochs and  hidden layer size [256,256,256]. Hence, it may take some time to create the logs. Check the command line for the runtime.
 
 ## Report
 
-The report for this assignment can be found [here]().
-## Authors
+The wandb report for this assignment can be found [here](https://wandb.ai/shreyashgadgil007/CS-6910%20A1/reports/CS6910-Assignment-1--VmlldzozNTQ1MjU1).
+## Author
+[Shreyash Gadgil](https://github.com/Shreyash007)
+ED22S016
