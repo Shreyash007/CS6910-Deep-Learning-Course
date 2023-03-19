@@ -47,15 +47,23 @@ keras #ONLY FOR IMPORTING DATASET
 
 ## Question 1, 2, 3
 
-The code for question 1,2,3 can be found [here](https://github.com/RituparnaAdha/cs6910/commit/349f0e600abf3c370c902df77675dbb2577d06aa).
+The code for question 1,2,3 can be found [here](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/Assignment1(Q1_Q3).ipynb).
 
-
+## All experiments
+All experiments are logged in [this](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/Assignment1(all_experiments).ipynb) google colab notebook.
+(If having difficulty to view the code of colab notebook, refer .py file of the same [here](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/assignment1(python_file_if_unable_to_use_colab_notebook).py))
 ## Evaluation file(train.py)
 
-For evaluating our model download [train.py](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/train.py) file. (make sure you have all the prerequisite libraries installed). To check the wandb log for evaluation run the following command in the command line(this will take the default arguments).
+For evaluating model download [train.py](https://github.com/Shreyash007/CS6910-Deep-Learning-Course/blob/main/train.py) file. (make sure you have all the prerequisite libraries installed). 
+
+
+And run the following command in the command line(this will take the default arguments).
 ```
 python train.py 
 ```
+The default evaluation run can be seen [here](https://wandb.ai/shreyashgadgil007/shreyashgadgil007/runs/) in wandb.
+
+
 The arguments supported by train.py file are:
 
 | Name | Default Value | Description |
